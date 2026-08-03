@@ -78,6 +78,16 @@ nav a:hover {
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 
+nav a:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+nav a.active-link {
+    color: #111111;
+    background-color: #ffffff;
+}
+
 nav a:active {
     transform: scale(0.96);
 }
@@ -176,6 +186,72 @@ footer strong {
     letter-spacing: 0.04rem;
 }
 
+.page-hero {
+    border-top: 0.4rem solid #e63946;
+}
+
+.section-label {
+    margin: 0 0 0.5rem;
+    color: #555555;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    width: min(1200px, calc(100% - 2rem));
+    margin: 1.5rem auto;
+}
+
+.table-section {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.table-section h2 {
+    margin-top: 0;
+    color: #e63946;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 34rem;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: #171717;
+    color: #ffffff;
+}
+
+tbody tr {
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+tbody tr:hover {
+    background-color: #ffecef;
+    transform: scale(1.01);
+}
+
 @media (max-width: 850px) {
     nav {
         flex-direction: column;
@@ -195,6 +271,10 @@ footer strong {
 
     aside {
         width: 100%;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -225,8 +305,17 @@ footer strong {
     }
 
     article,
-    aside {
+    aside,
+    .table-section {
         padding: 1.2rem;
+    }
+
+    .section-label {
+        font-size: 0.85rem;
+    }
+
+    table {
+        min-width: 28rem;
     }
 }
 
