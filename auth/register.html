@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta</title>
+    <link rel="stylesheet" href="../css/style-auth.css">
+</head>
+<body>
+
+    <form class="container">
+      
+        <h2>Crear cuenta</h2>
+
+        <div class="input-group">
+            <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre"
+                minlength="2"
+                autocomplete="name"
+                required
+            >
+            <span class="input-check"></span>
+        </div>
+
+        <div class="input-group">
+            <input
+                type="email"
+                name="email"
+                placeholder="Correo electrónico"
+                autocomplete="email"
+                required
+            >
+            <span class="input-check"></span>
+        </div>
+
+        <div class="input-group">
+            <input
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                minlength="6"
+                autocomplete="new-password"
+                required
+            >
+            <span class="input-check"></span>
+        </div>
+
+        <button type="submit">
+            <span class="button-text">Registrarme</span>
+            <span class="button-check"></span>
+        </button>
+
+        <p class="account-text">
+            ¿Ya tienes una cuenta?
+            <a href="login.html">Inicia sesión</a>
+            
+        </p>
+        <p class="account-text">
+            <a href="../index.html" class="back-link">Regresar</a>
+        </p>
+    </form>
+
+</body>
+</html>
+
